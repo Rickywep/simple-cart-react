@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import ProductCart from "./ProductCart";
 
 export default function Cart({ cart, setCart }) {
-  function onChangeQuantity(id, cantidad) {
+  function onChangeQuantity(id, quantity) {
     const updatedCart = cart.map((cartItem) => {
       if (cartItem.product.id === id) {
-        return { ...cartItem, cantidad };
+        return { ...cartItem, quantity };
       }
       return cartItem;
     });
@@ -14,7 +14,7 @@ export default function Cart({ cart, setCart }) {
   }
 
   let total = cart.reduce(
-    (total, { product, cantidad }) => total + product.price * cantidad,
+    (total, { product, quantity }) => total + product.price * quantity,
     0
   );
 

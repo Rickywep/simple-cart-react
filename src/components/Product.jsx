@@ -28,7 +28,7 @@ export default function Product({ product, cart, setCart }) {
               : "btn border-success btn-cart pulsating-circle"
           }
           onClick={() =>
-            setCart((cart) => cart.concat({ product, cantidad: 1 }))
+            setCart((cart) => cart.concat({ product, quantity: 1 }))
           }
         >
           {inCart ? (

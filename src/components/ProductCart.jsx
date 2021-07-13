@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function ProductCart({ cartItem, onChangeQuantity }) {
-  const { product, cantidad } = cartItem;
-  const subtotal = product.price * cantidad;
+  const { product, quantity } = cartItem;
+  const subtotal = product.price * quantity;
   const onChangeSubtotal = (e) => {
     const quantity = parseInt(e.target.value);
     onChangeQuantity(product.id, quantity);
@@ -18,12 +18,12 @@ export default function ProductCart({ cartItem, onChangeQuantity }) {
           <span className="ms-2 badge bg-warning p-2">${product.price}</span>
         </p>
         <p>
-          Cantidad:
+          quantity:
           <select
             className="ms-2 form-select w-25 d-inline"
             onChange={onChangeSubtotal}
           >
-            <option defaultValue={cantidad}>1</option>
+            <option defaultValue={quantity}>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
