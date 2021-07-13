@@ -20,8 +20,8 @@ export default function Products() {
       <div className="d-flex flex-wrap">
         {products.map((product) => (
           <div key={product.id} className="card m-2" style={{ width: "18rem" }}>
-            <div style={{ height: "20rem" }} className="text-center">
-              <img src={product.image} alt="" className="h-100 img-fluid p-4" />
+            <div style={{ height: "20rem"}} className="overflow-hidden text-center d-flex align-items-center">
+              <img src={product.image} alt="" className="img-fluid p-4" />
             </div>
             <div className="card-body text-center bg-light">
               <h5 className="card-title">{product.title.slice(0, 20)}</h5>
