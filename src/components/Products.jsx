@@ -17,13 +17,11 @@ export default function Products() {
   return (
     <div>
       <h2 className="text-center">Products</h2>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-center products-cards">
         {products.map((product) => (
-          <div key={product.id} className="card m-2" style={{ width: "18rem" }}>
-            <div style={{ height: "20rem"}} className="overflow-hidden text-center d-flex align-items-center">
-              <img src={product.image} alt="" className="img-fluid p-4" />
-            </div>
-            <div className="card-body text-center bg-light">
+          <div key={product.id} className="card m-2">
+              <img src={product.image} alt="" className="img-fit p-4" />
+            <div className="card-body text-center">
               <h5 className="card-title">{product.title.slice(0, 20)}</h5>
               <button className="btn btn-outline-success">
                 <img

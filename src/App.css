@@ -45,3 +45,11 @@ button {
   object-fit: contain;
   height: 20rem;
 }
+
+.products-cards .card {
+  width: 18rem;
+  border-color: #acddac;
+}
+.products-cards .card .card-body {
+  background-color: #e9ffe9;
+}
