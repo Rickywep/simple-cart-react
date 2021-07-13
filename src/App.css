@@ -40,3 +40,8 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.img-fit {
+  object-fit: contain;
+  height: 20rem;
+}
